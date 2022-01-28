@@ -68,19 +68,15 @@ class Robot {
 
 	checkValidPlacement(x, y, direction) {
 		if (x === undefined || y === undefined || direction === undefined) {
-			console.log('false');
 			return false; //missing parameters
 		}
 		if (x < TABLE_LOWER_BOUND || x > TABLE_UPPER_BOUND) {
-			console.log('false x');
 			return false;
 		}
 		if (y < TABLE_LOWER_BOUND || y > TABLE_UPPER_BOUND) {
-			console.log('false y');
 			return false;
 		}
 		if (!(DIRECTIONS.includes(direction))) {
-			console.log('false d');
 			return false;
 		}
 		return true;
