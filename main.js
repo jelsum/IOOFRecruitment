@@ -21,7 +21,7 @@ rl.on('line', (line) => {
 		case 'PLACE':
 			if (placed) return;
 			location = line[1].split(',');
-			robot = new Robot(location[0], location[1], location[2]);
+			robot = new Robot(parseInt(location[0]), parseInt(location[1]), location[2]);
 			break;
 		case 'MOVE':
 			if (!placed) return;
